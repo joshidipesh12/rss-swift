@@ -6,6 +6,6 @@ export default (req, res) => {
   axios
     .get(link)
     .then((feed) => parseStringPromise(feed.data))
-    .then((feedJSON) => res.status(200).json(feedJSON))
-    .catch((err) => res.status(400).json({ code: err.code }));
+    .then((feedJSON) => res.status(200).json(feedJSON.rss.channel[0].item))
+    .catch((err) => res.status(400).json(err));
 };
