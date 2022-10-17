@@ -2,7 +2,7 @@ import {useEffect, useLayoutEffect, useState} from 'react';
 
 const useThemeDetector = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
-  const mqListener = (_, e) => {
+  const themeFn = e => {
     setIsDarkTheme(e.matches);
   };
 
@@ -13,8 +13,8 @@ const useThemeDetector = () => {
 
   useEffect(() => {
     const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
-    darkThemeMq.addEventListener('change', mqListener);
-    return () => darkThemeMq.removeEventListener('change', mqListener);
+    darkThemeMq.addEventListener('change', themeFn);
+    return () => darkThemeMq.removeEventListener('change', themeFn);
   }, []);
   return isDarkTheme;
 };

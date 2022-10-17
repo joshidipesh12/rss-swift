@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import React, {useState, useEffect} from 'react';
+import {useRouter} from 'next/router';
 import {
   EuiListGroup,
   EuiLoadingContent,
@@ -12,6 +12,7 @@ import {
 import Header from '../../components/Header';
 import EmptyPost from '../../components/EmptyPost';
 import Post from '../../components/Post';
+import {useDispatch} from 'react-redux';
 
 const feedList = [
   {
@@ -26,17 +27,18 @@ const feedList = [
     label: 'The Verge',
     href: 'https://theverge.com',
   },
-  { label: 'Apology Line' },
+  {label: 'Apology Line'},
 ];
 
 export default () => {
   const [feed, setFeed] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
+  const disptch = useDispatch();
 
   useEffect(() => {
-    const fetchData = (link) => {
-      axios.get(`/api/feeds/${encodeURIComponent(link)}`).then((res) => {
+    const fetchData = link => {
+      axios.get(`/api/feeds/${encodeURIComponent(link)}`).then(res => {
         setFeed(res.data);
         setIsLoading(false);
       });
@@ -50,14 +52,14 @@ export default () => {
     <EmptyPost key={htmlIdGenerator()()} />
   ));
   return (
-    <EuiProvider colorMode='light'>
+    <div>
       <Header />
       <Page>
         <Page.Sidebar>
           <EuiTitle>
-            <h2 style={{ marginBottom: '2rem' }}>Feeds</h2>
+            <h2 style={{marginBottom: '2rem'}}>Feeds</h2>
           </EuiTitle>
-          <EuiListGroup listItems={feedList} size='s' color='primary' />
+          <EuiListGroup listItems={feedList} size="s" color="primary" />
         </Page.Sidebar>
         <Page.Header
           pageTitle={isLoading ? <EuiLoadingContent lines={1} /> : feed.title}
@@ -75,11 +77,11 @@ export default () => {
         <Page.Section>
           {isLoading
             ? LoadingItems
-            : feed.items.map((item) => (
+            : feed.items.map(item => (
                 <Post {...item} key={htmlIdGenerator()()} />
               ))}
         </Page.Section>
       </Page>
-    </EuiProvider>
+    </div>
   );
 };
