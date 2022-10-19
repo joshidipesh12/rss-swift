@@ -5,14 +5,12 @@ import {
   EuiListGroup,
   EuiLoadingContent,
   EuiPageTemplate as Page,
-  EuiProvider,
   EuiTitle,
   htmlIdGenerator,
 } from '@elastic/eui';
 import Header from '../../components/Header';
 import EmptyPost from '../../components/EmptyPost';
 import Post from '../../components/Post';
-import {useDispatch} from 'react-redux';
 
 const feedList = [
   {
@@ -34,7 +32,6 @@ export default () => {
   const [feed, setFeed] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
-  const disptch = useDispatch();
 
   useEffect(() => {
     const fetchData = link => {
@@ -47,7 +44,6 @@ export default () => {
     if (router.isReady) fetchData(router.query.link);
   }, [router.isReady]);
 
-  console.log(feed);
   const LoadingItems = Array.from(Array(5)).map(() => (
     <EmptyPost key={htmlIdGenerator()()} />
   ));
