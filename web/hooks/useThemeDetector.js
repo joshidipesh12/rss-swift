@@ -6,17 +6,13 @@ const useThemeDetector = () => {
     setIsDarkTheme(e.matches);
   };
 
-  useLayoutEffect(() => {
-    setIsDarkTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    return () => {};
-  }, []);
-
   useEffect(() => {
+    setIsDarkTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
     const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
     darkThemeMq.addEventListener('change', themeFn);
     return () => darkThemeMq.removeEventListener('change', themeFn);
   }, []);
-  return isDarkTheme;
+  return isDarkTheme ? 'dark' : 'light';
 };
 
 export default useThemeDetector;
