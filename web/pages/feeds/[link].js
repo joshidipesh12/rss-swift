@@ -2,33 +2,16 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import {useRouter} from 'next/router';
 import {
-  EuiListGroup,
   EuiLoadingContent,
   EuiPageTemplate as Page,
-  EuiTitle,
   htmlIdGenerator,
 } from '@elastic/eui';
 import Header from '../../components/Header';
 import EmptyPost from '../../components/EmptyPost';
 import Post from '../../components/Post';
+import FeedLayout from '../../Layouts/FeedLayout';
 
-const feedList = [
-  {
-    label: 'OneFootball',
-    href: 'https://onefootball.com',
-  },
-  {
-    label: 'CNET',
-    href: 'https://cnet.com',
-  },
-  {
-    label: 'The Verge',
-    href: 'https://theverge.com',
-  },
-  {label: 'Apology Line'},
-];
-
-export default () => {
+const Feeds = () => {
   const [feed, setFeed] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
@@ -48,36 +31,29 @@ export default () => {
     <EmptyPost key={htmlIdGenerator()()} />
   ));
   return (
-    <div>
-      <Header />
-      <Page>
-        <Page.Sidebar>
-          <EuiTitle>
-            <h2 style={{marginBottom: '2rem'}}>Feeds</h2>
-          </EuiTitle>
-          <EuiListGroup listItems={feedList} size="s" color="primary" />
-        </Page.Sidebar>
-        <Page.Header
-          pageTitle={isLoading ? <EuiLoadingContent lines={1} /> : feed.title}
-          description={
-            isLoading ? (
-              <EuiLoadingContent lines={1} />
-            ) : (
-              <small>{feed.description}</small>
-            )
-          }
-          iconType={
-            isLoading || !('image' in feed) ? undefined : feed.image.url
-          }
-        />
-        <Page.Section>
-          {isLoading
-            ? LoadingItems
-            : feed.items.map(item => (
-                <Post {...item} key={htmlIdGenerator()()} />
-              ))}
-        </Page.Section>
-      </Page>
-    </div>
+    <>
+      <Page.Header
+        pageTitle={isLoading ? <EuiLoadingContent lines={1} /> : feed.title}
+        description={
+          isLoading ? (
+            <EuiLoadingContent lines={1} />
+          ) : (
+            <small>{feed.description}</small>
+          )
+        }
+        iconType={isLoading || !('image' in feed) ? undefined : feed.image.url}
+      />
+      <Page.Section>
+        {isLoading
+          ? LoadingItems
+          : feed.items.map(item => (
+              <Post {...item} key={htmlIdGenerator()()} />
+            ))}
+      </Page.Section>
+    </>
   );
 };
+
+Feeds.Layout = FeedLayout;
+
+export default Feeds;

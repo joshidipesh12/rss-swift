@@ -3,14 +3,16 @@ import {
   EuiHeaderLogo,
   EuiHeaderSection,
   EuiHeaderSectionItem,
-  EuiIcon,
-  EuiSwitch,
 } from '@elastic/eui';
 import '@elastic/eui/dist/eui_theme_light.css';
+import { useTheme } from 'next-themes';
 
 export default () => {
+  const { resolvedTheme } = useTheme();
   return (
-    <EuiHeader theme='dark' position='fixed'>
+    <EuiHeader
+      theme={resolvedTheme === 'light' ? 'default' : 'dark'}
+      position='fixed'>
       <EuiHeaderSection side='left'>
         <EuiHeaderSectionItem>
           <EuiHeaderLogo iconType='https://www.svgrepo.com/show/25140/rss.svg'>

@@ -1,6 +1,6 @@
-import {useEffect} from 'react';
-import Header from '../components/Header';
+import Layout from '../Layouts/Layout';
 
 export default function Home() {
-  return <Header />;
+  return <></>;
 }
+Home.Layout = Layout;
