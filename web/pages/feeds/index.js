@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {EuiCheckbox, EuiSpacer, EuiSwitch, EuiTitle} from '@elastic/eui';
 import {useTheme} from 'next-themes';
+import Layout from '../../Layouts/Layout';
 
 function Home() {
   const {theme, resolvedTheme, setTheme} = useTheme();
@@ -40,5 +41,7 @@ function Home() {
     </main>
   );
 }
+
+Home.Layout = Layout;
 
 export default Home;

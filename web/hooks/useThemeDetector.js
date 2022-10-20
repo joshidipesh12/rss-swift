@@ -1,4 +1,4 @@
-import {useEffect, useLayoutEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 
 const useThemeDetector = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
