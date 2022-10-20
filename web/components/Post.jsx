@@ -2,21 +2,26 @@ import {
   EuiFlexGroup,
   EuiFlexItem,
   EuiImage,
+  EuiLink,
   EuiPanel,
   EuiText,
+  EuiTextColor,
   EuiTitle,
+  useEuiTheme,
 } from '@elastic/eui';
 
 import { DateTime } from 'luxon';
+import { setPostClicked } from '../store/slices/post';
+import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 
-export default ({
-  title,
-  contentSnippet,
-  content,
-  thumbnail,
-  image,
-  isoDate,
-}) => {
+export default props => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const { euiTheme } = useEuiTheme();
+
+  const { title, contentSnippet, content, thumbnail, image, isoDate } = props;
+
   const getDate = () => {
     let d = DateTime.now()
       .diff(DateTime.fromISO(isoDate), ['day', 'hours'])
@@ -31,6 +36,12 @@ export default ({
     });
   };
 
+  const handleClick = (event, post) => {
+    event.preventDefault();
+    dispatch(setPostClicked(post));
+    router.push('/post');
+  };
+
   return (
     <EuiPanel color='transparent'>
       <EuiFlexGroup>
@@ -40,17 +51,25 @@ export default ({
           </EuiFlexItem>
         ) : null}
         <EuiFlexItem grow={10}>
-          <EuiText>
-            <EuiTitle size='s'>
-              <p style={{ display: 'flex', flexDirection: 'column' }}>
-                {title}
-                <small style={{ fontWeight: 'normal', color: 'green' }}>
-                  {getDate()}
-                </small>
+          <EuiLink
+            href='/post'
+            color='success'
+            css={{ textDecoration: 'none' }}
+            onClick={event => handleClick(event, props)}>
+            <EuiText>
+              <EuiTitle size='s'>
+                <p style={{ display: 'flex', flexDirection: 'column' }}>
+                  {title}
+                  <EuiTextColor color='success'>
+                    <small style={{ fontWeight: 'normal' }}>{getDate()}</small>
+                  </EuiTextColor>
+                </p>
+              </EuiTitle>
+              <p style={{ color: euiTheme.colors.text }}>
+                {contentSnippet || content}
               </p>
-            </EuiTitle>
-            <p>{contentSnippet || content}</p>
-          </EuiText>
+            </EuiText>
+          </EuiLink>
         </EuiFlexItem>
       </EuiFlexGroup>
     </EuiPanel>

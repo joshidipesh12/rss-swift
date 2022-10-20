@@ -1,12 +1,13 @@
 import axios from 'axios';
-import React, {useState, useEffect} from 'react';
-import {useRouter} from 'next/router';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import {
+  EuiLink,
   EuiLoadingContent,
   EuiPageTemplate as Page,
   htmlIdGenerator,
 } from '@elastic/eui';
-import Header from '../../components/Header';
+
 import EmptyPost from '../../components/EmptyPost';
 import Post from '../../components/Post';
 import FeedLayout from '../../Layouts/FeedLayout';
@@ -30,10 +31,19 @@ const Feeds = () => {
   const LoadingItems = Array.from(Array(5)).map(() => (
     <EmptyPost key={htmlIdGenerator()()} />
   ));
+  console.log(feed);
   return (
     <>
       <Page.Header
-        pageTitle={isLoading ? <EuiLoadingContent lines={1} /> : feed.title}
+        pageTitle={
+          isLoading ? (
+            <EuiLoadingContent lines={1} />
+          ) : (
+            <EuiLink href={feed.link} color='text' target='_blank'>
+              {feed.title}
+            </EuiLink>
+          )
+        }
         description={
           isLoading ? (
             <EuiLoadingContent lines={1} />
@@ -47,7 +57,11 @@ const Feeds = () => {
         {isLoading
           ? LoadingItems
           : feed.items.map(item => (
-              <Post {...item} key={htmlIdGenerator()()} />
+              <Post
+                {...item}
+                feedTitle={feed.title}
+                key={htmlIdGenerator()()}
+              />
             ))}
       </Page.Section>
     </>
