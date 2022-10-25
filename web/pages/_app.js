@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import '@elastic/eui/dist/eui_theme_light.css';
+import '../styles/carousel.css';
 
 import React from 'react';
 import { Provider } from 'react-redux';
