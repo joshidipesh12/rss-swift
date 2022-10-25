@@ -1,0 +1,56 @@
+.container {
+  min-height: var(--container-height);
+  width: 100vw;
+  top: 5%;
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider {
+  width: auto;
+  min-height: inherit;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.slider > .card {
+  height: var(--card-height);
+  min-width: var(--card-width);
+  width: var(--card-width);
+  border-radius: 2%;
+  box-shadow: -0.3rem 0.3rem 1rem 0.2rem rgba(152, 143, 143, 0.2),
+    0.3rem -0.3rem 1rem 0.2rem rgba(152, 143, 143, 0.2);
+}
+
+.container > .controls {
+  position: absolute;
+  min-height: var(--card-height);
+  width: 90%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.7rem 0 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card_active {
+  min-height: calc(var(--card-height) + 50px);
+}
+
+.card_active img {
+  height: calc(var(--card-height) - 50px) !important;
+}
+
+.card img {
+  height: calc(var(--card-height) - 90px);
+  width: 100%;
+  border-radius: 2% 2% 0 0;
+}

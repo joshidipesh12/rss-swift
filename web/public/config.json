@@ -1,0 +1,239 @@
+{
+  "categories": [
+    "famous",
+    "politics",
+    "technology",
+    "entertainment",
+    "sports",
+    "lifestyle"
+  ],
+  "trending": [
+    "Goop",
+    "NDTV Sports",
+    "ESPN",
+    "How To-Geeks",
+    "CNN",
+    "DNA",
+    "O'Reilly",
+    "E! Online",
+    "Camille Styles",
+    "Mashable",
+    "Tech Crunch",
+    "WIRED",
+    "The Economic Times",
+    "Fox Sports",
+    "Digital Trends"
+  ],
+  "providers": [
+    {
+      "name": "The Times Of India",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/d/d7/TOI_logo.png/revision/latest/scale-to-width-down/250?cb=20210602200623",
+      "rss_url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+      "website": "https://timesofindia.indiatimes.com/",
+      "category": "famous"
+    },
+    {
+      "name": "WIRED",
+      "logo": "https://satelles.com/wp-content/uploads/2020/07/WORKS_wired-magazine.jpg",
+      "website": "https://www.wired.com/",
+      "category": "famous",
+      "rss_url": "https://www.wired.com/feed/rss"
+    },
+    {
+      "name": "How To-Geeks",
+      "logo": "https://pbs.twimg.com/profile_images/1029818993954250753/gTKL-UVp_400x400.jpg",
+      "rss_url": "https://feeds.howtogeek.com/HowToGeek",
+      "category": "famous",
+      "website": "https://www.howtogeek.com/"
+    },
+    {
+      "name": "CNN",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/CNN_International_logo.svg/2048px-CNN_International_logo.svg.png",
+      "rss_url": "http://rss.cnn.com/rss/cnn_topstories.rss",
+      "category": "famous",
+      "website": "https://edition.cnn.com/"
+    },
+    {
+      "name": "Life Hacker",
+      "logo": "https://m.media-amazon.com/images/I/412tyIw0V1L.png",
+      "rss_url": "https://lifehacker.com/rss",
+      "category": "famous",
+      "website": "https://lifehacker.com/"
+    },
+    {
+      "name": "The Economic Times",
+      "logo": "https://pbs.twimg.com/profile_images/1285571205966073857/rE3KyZFW_400x400.jpg",
+      "rss_url": "https://government.economictimes.indiatimes.com/rss/topstories",
+      "website": "https://m.economictimes.com/",
+      "category": "politics"
+    },
+    {
+      "name": "New York Times",
+      "logo": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1491958734/bqp32una36b06hmbulla.png",
+      "rss_url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      "website": "https://www.nytimes.com/international/",
+      "category": "politics"
+    },
+    {
+      "name": "Politico",
+      "logo": "https://play-lh.googleusercontent.com/G1D8XVOhCOy8KnVReqbxAPit5Saa-EVUOqVfkV6hJVwM1MOaGrgc0UmjOOzQaVwFr-s",
+      "rss_url": "https://www.politico.com/rss/politicopicks.xml",
+      "website": "https://www.politico.com/",
+      "category": "politics"
+    },
+    {
+      "name": "DNA",
+      "logo": "https://cdn.dnaindia.com/images/2018/DNA-1200.png",
+      "rss_url": "https://www.dnaindia.com/feeds/india.xml",
+      "website": "https://www.dnaindia.com/",
+      "category": "politics"
+    },
+    {
+      "name": "The Hindu",
+      "logo": "https://www.pngitem.com/pimgs/m/218-2186575_thehindu-logo-logo-of-the-hindu-newspaper-hd.png",
+      "rss_url": "https://www.thehindu.com/news/national/?service=rss",
+      "website": "https://www.thehindu.com/",
+      "category": "politics"
+    },
+    {
+      "name": "Tech Crunch",
+      "logo": "https://upskill.io/wp-content/uploads/2018/02/tech-crunch-logo.jpg",
+      "rss_url": "https://techcrunch.com/feed/",
+      "category": "technology",
+      "website": "https://techcrunch.com/"
+    },
+    {
+      "name": "CNET",
+      "logo": "https://yt3.ggpht.com/gHm1T5I1vA-ZB9Nwh7MQPMlZ8o63Qmt6b5PQZKs7-eeo85dtkmskwOyQ7_Jbf2Y6bzmcDabsIg=s900-c-k-c0x00ffffff-no-rj",
+      "rss_url": "https://www.cnet.com/rss/news",
+      "category": "technology",
+      "website": "https://www.cnet.com"
+    },
+    {
+      "name": "Digital Trends",
+      "logo": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1445641341/v6tlgvltxcz4cyohcoru.jpg",
+      "rss_url": "https://www.digitaltrends.com/feed/",
+      "category": "technology",
+      "website": "https://www.digitaltrends.com/"
+    },
+    {
+      "name": "O'Reilly",
+      "logo": "https://cdn.oreillystatic.com/oreilly/images/logo_guidelines_bg_light.png",
+      "rss_url": "https://feeds.feedburner.com/oreilly/radar/atom",
+      "category": "technology",
+      "website": "https://www.oreilly.com/radar/"
+    },
+    {
+      "name": "Fossbytes",
+      "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQFCUqPROFmFjg/company-logo_200_200/0/1610452777841?e=2147483647&v=beta&t=gCNDA0liVD2tRakF2f8JIDIiEVUPO1pdivDEALv2glQ",
+      "rss_url": "https://fossbytes.com/feed/?x=1",
+      "category": "technology",
+      "website": "https://fossbytes.com/"
+    },
+    {
+      "name": "Mashable",
+      "logo": "https://mashable.com/images/mashable-logomark.png",
+      "rss_url": "https://in.mashable.com/feed.xml",
+      "category": "entertainment",
+      "website": "https://in.mashable.com/"
+    },
+    {
+      "name": "E! Online",
+      "logo": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0006/8933/brand.gif?itok=05QGv2lc",
+      "rss_url": "https://eol-feeds.eonline.com/rssfeed/us/top_stories",
+      "category": "entertainment",
+      "website": "https://www.eonline.com/"
+    },
+    {
+      "name": "TMZ.com",
+      "logo": "https://static.tmz.com/tmz-web/img/sections/home/og-image-1200x630-v1.png",
+      "rss_url": "https://www.tmz.com/rss.xml",
+      "category": "entertainment",
+      "website": "https://www.tmz.com/"
+    },
+    {
+      "name": "BuzzFeed Celeb",
+      "logo": "https://static.wikia.nocookie.net/buzzfeed-tasty/images/8/89/BuzzFeed_Celeb.jpeg/revision/latest?cb=20200309190016",
+      "rss_url": "https://www.buzzfeed.com/in/celebrity.xml",
+      "category": "entertainment",
+      "website": "https://www.buzzfeed.com/in/celebrity"
+    },
+    {
+      "name": "Vanity Fair",
+      "logo": "https://www.logolynx.com/images/logolynx/67/677c5d3c7490fb715b06751f2358a169.jpeg",
+      "rss_url": "https://www.vanityfair.com/feed/rss",
+      "category": "entertainment",
+      "website": "https://www.vanityfair.com/"
+    },
+    {
+      "name": "One Football",
+      "logo": "https://pbs.twimg.com/profile_images/1550051536725843968/w0fLFCiP_400x400.jpg",
+      "rss_url": "https://onefootball.com/rss/en.xml",
+      "category": "sports",
+      "website": "https://onefootball.com/en/home"
+    },
+    {
+      "name": "NDTV Sports",
+      "logo": "https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2015/10/23/Untitled-1_3.jpg?itok=AO8CQsE1",
+      "rss_url": "https://sports.ndtv.com/rss/all",
+      "category": "sports",
+      "website": "https://sports.ndtv.com/"
+    },
+    {
+      "name": "ESPN",
+      "logo": "https://www.welovesolo.com/wp-content/uploads/vecteezy/06/bmue0hizmxj.jpg",
+      "rss_url": "https://www.espn.com/espn/rss/news",
+      "category": "sports",
+      "website": "https://www.espn.com/"
+    },
+    {
+      "name": "Fox Sports",
+      "logo": "https://play-lh.googleusercontent.com/0R5MXYkN1Kh5EGBDEWdxOTO7DGlQpOM64K6YrusGF-ixKM6qH8-GjBgmQg390ssG8w",
+      "rss_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30",
+      "category": "sports",
+      "website": "https://www.foxsports.com/"
+    },
+    {
+      "name": "Sports 360",
+      "logo": "https://sport360.com/wp-content/uploads/2017/05/LOGO.jpg",
+      "rss_url": "https://sport360.com/rss",
+      "category": "sports",
+      "website": "https://sport360.com/"
+    },
+    {
+      "name": "Fox News",
+      "logo": "https://static.foxnews.com/static/orion/styles/img/fox-news/s/logos/fox-news-logo.svg",
+      "rss_url": "https://moxie.foxnews.com/google-publisher/lifestyle.xml",
+      "category": "lifestyle",
+      "website": "https://www.foxnews.com/lifestyle"
+    },
+    {
+      "name": "The Blond Aboard",
+      "logo": "https://i.pinimg.com/736x/68/fc/01/68fc0192ada05475d6aac8c0b4470027.jpg",
+      "rss_url": "https://feeds.feedburner.com/Theblondeabroad/ScWo",
+      "category": "lifestyle",
+      "website": "https://www.theblondeabroad.com/travel-blog/"
+    },
+    {
+      "name": "Goop",
+      "logo": "https://i.pinimg.com/736x/bf/b3/09/bfb309aba355ba9c4c02765b41b263e6--gwyneth-paltrow-motion.jpg",
+      "rss_url": "https://goop.com/feed/",
+      "category": "lifestyle",
+      "website": "https://goop.com/"
+    },
+    {
+      "name": "Camille Styles",
+      "logo": "https://media-exp1.licdn.com/dms/image/C560BAQE6XkpkQeKzMg/company-logo_200_200/0/1615501263275?e=2147483647&v=beta&t=qrEvA_2orskJ6RXRidqrHVLkC348NLskiFJOeTH4qbY",
+      "rss_url": "https://camillestyles.com/feed/",
+      "category": "lifestyle",
+      "website": "https://camillestyles.com/"
+    },
+    {
+      "name": "Wit & Delight",
+      "logo": "https://i.pinimg.com/736x/d5/5d/05/d55d0581a07df366dd134f661ca9bb87--branding-design-design-logos.jpg",
+      "rss_url": "https://witanddelight.com/feed/",
+      "category": "lifestyle",
+      "website": "https://witanddelight.com/"
+    }
+  ]
+}

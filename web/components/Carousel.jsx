@@ -1,6 +1,7 @@
 import { EuiButtonIcon } from '@elastic/eui';
 import React, { useEffect, useRef, useState } from 'react';
 import animate, { linear } from '../util/animations';
+import styles from '../styles/carousel.module.css';
 
 const Carousel = ({
   children,
@@ -38,8 +39,8 @@ const Carousel = ({
 
     setPosition(from + speed);
 
-    cards.current[currentCard].classList.remove('card-active');
-    cards.current[currentCard - 1].classList.add('card-active');
+    cards.current[currentCard].classList.remove(styles.card_active);
+    cards.current[currentCard - 1].classList.add(styles.card_active);
     setCurrentCard(card => card - 1);
   };
 
@@ -59,8 +60,8 @@ const Carousel = ({
       draw: progress => setPosition(from - progress * speed),
     });
 
-    cards.current[currentCard].classList.remove('card-active');
-    cards.current[currentCard + 1].classList.add('card-active');
+    cards.current[currentCard].classList.remove(styles.card_active);
+    cards.current[currentCard + 1].classList.add(styles.card_active);
     setCurrentCard(card => card + 1);
   };
 
@@ -93,22 +94,22 @@ const Carousel = ({
 
     setCurrentCard(slide);
     setPosition(limit - slide * speed);
-    cards.current[slide].classList.add('card-active');
+    cards.current[slide].classList.add(styles.card_active);
   }, []);
 
   return (
-    <div id='container'>
+    <div className={styles.container}>
       {React.Children.map(children, child =>
         React.cloneElement(child, {
           setRef,
           ref: slider,
         }),
       )}
-      <div id='controls'>
+      <div className={styles.controls}>
         <EuiButtonIcon
           size='m'
           iconType='arrowLeft'
-          id='left-btn'
+          className={styles.left_btn}
           display={iconDisplay || 'empty'}
           onClick={e => leftClick(e)}
           aria-label='previous slide'
@@ -117,7 +118,7 @@ const Carousel = ({
         <EuiButtonIcon
           size='m'
           iconType='arrowRight'
-          id='right-btn'
+          className={styles.right_btn}
           display={iconDisplay || 'empty'}
           onClick={e => rightClick(e)}
           aria-label='next slide'
@@ -130,19 +131,19 @@ const Carousel = ({
 
 Carousel.Slider = React.forwardRef(({ children, setRef }, ref) => {
   return (
-    <div id='slider' ref={ref}>
+    <article className={styles.slider} ref={ref}>
       {React.Children.map(children, (child, i) =>
         React.cloneElement(child, { ref: ref => setRef(ref, i) }),
       )}
-    </div>
+    </article>
   );
 });
 
 Carousel.Slide = React.forwardRef(({ children }, ref) => {
   return (
-    <div className='card' ref={ref}>
+    <section className={styles.card} ref={ref}>
       {children}
-    </div>
+    </section>
   );
 });
 
