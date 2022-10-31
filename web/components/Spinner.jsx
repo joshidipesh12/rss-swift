@@ -14,5 +14,4 @@ const spinner = () => {
     </div>
   );
 };
-
 export default spinner;
