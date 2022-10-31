@@ -129,7 +129,7 @@ const Carousel = ({
   );
 };
 
-const CarouselSlider = React.forwardRef(({ children, setRef }, ref) => {
+const CarouselSlider = ({ children, setRef }, ref) => {
   return (
     <article className={styles.slider} ref={ref}>
       {React.Children.map(children, (child, i) =>
@@ -137,17 +137,17 @@ const CarouselSlider = React.forwardRef(({ children, setRef }, ref) => {
       )}
     </article>
   );
-});
+};
 
-const CarouselSlide = React.forwardRef(({ children }, ref) => {
+const CarouselSlide = ({ children }, ref) => {
   return (
     <section className={styles.card} ref={ref}>
       {children}
     </section>
   );
-});
+};
 
-Carousel.Slider = CarouselSlider;
-Carousel.Slide = CarouselSlide;
+Carousel.Slider = React.forwardRef(CarouselSlider);
+Carousel.Slide = React.forwardRef(CarouselSlide);
 
 export default Carousel;
