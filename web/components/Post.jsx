@@ -15,7 +15,7 @@ import { setPostClicked } from '../store/slices/post';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 
-export default props => {
+const Post = props => {
   const dispatch = useDispatch();
   const router = useRouter();
   const { euiTheme } = useEuiTheme();
@@ -75,3 +75,5 @@ export default props => {
     </EuiPanel>
   );
 };
+
+export default Post;

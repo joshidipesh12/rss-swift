@@ -7,7 +7,7 @@ import {
 import '@elastic/eui/dist/eui_theme_light.css';
 import { useTheme } from 'next-themes';
 
-export default () => {
+const Header = () => {
   const { resolvedTheme } = useTheme();
   return (
     <EuiHeader
@@ -23,3 +23,5 @@ export default () => {
     </EuiHeader>
   );
 };
+
+export default Header;

@@ -5,7 +5,7 @@ import {
   useEuiTheme,
 } from '@elastic/eui';
 
-export default () => {
+const EmptyPost = () => {
   const { euiTheme } = useEuiTheme();
   return (
     <div style={{ marginTop: '1rem' }}>
@@ -28,3 +28,5 @@ export default () => {
     </div>
   );
 };
+
+export default EmptyPost;

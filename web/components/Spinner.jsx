@@ -1,6 +1,6 @@
 import { EuiLoadingSpinner } from '@elastic/eui';
 
-export default () => {
+const spinner = () => {
   return (
     <div
       style={{
@@ -14,3 +14,5 @@ export default () => {
     </div>
   );
 };
+
+export default spinner;
