@@ -4,5 +4,5 @@
   "singleQuote": false,
   "trailingComma": "all",
   "arrowParens": "avoid",
-  "jsxSingleQuote": true
+  "jsxSingleQuote": false
 }

@@ -2,7 +2,7 @@
   min-height: 100vh;
   width: 98.5vw;
   overflow: hidden;
-  margin-top: 5rem;
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
