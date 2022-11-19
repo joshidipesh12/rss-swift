@@ -1,50 +1,36 @@
 import { useState, useEffect } from "react";
-import {
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
-  EuiIcon,
-} from "@elastic/eui";
-import "@elastic/eui/dist/eui_theme_light.css";
-import { useTheme } from "next-themes";
-import { useRouter } from "next/router";
 import Settings from "./Settings";
+import { Button, Image, Navbar, Text } from "@nextui-org/react";
 
 const Header = () => {
-  const router = useRouter();
-  const { resolvedTheme } = useTheme();
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   return (
-    <EuiHeader
-      theme={resolvedTheme === "light" ? "default" : "dark"}
-      position="fixed">
-      <EuiHeaderSection side="left">
-        <EuiHeaderSectionItem
-          css={{ cursor: "pointer" }}
-          onClick={() => router.push("/")}>
-          <EuiHeaderLogo iconType="/icon.png">
-            {/* https://www.svgrepo.com/show/25140/rss.svg */}
-            RSS Swift
-          </EuiHeaderLogo>
-        </EuiHeaderSectionItem>
-      </EuiHeaderSection>
-      <EuiHeaderSection side="right">
-        <EuiHeaderSectionItem>
-          <EuiHeaderSectionItemButton
+    <>
+      <Navbar isCompact variant="sticky">
+        <Navbar.Content>
+          <Navbar.Link href="/">
+            <Image src="/icon.png" objectFit="contain" height={30} width={30} />
+            <Text b size="$1xl" color="inherit" hideIn="xs">
+              Swift RSS
+            </Text>
+          </Navbar.Link>
+        </Navbar.Content>
+        <Navbar.Content>
+          <Button
+            auto
+            shadow
             aria-label="App Settings"
             onClick={() => setIsSettingsOpen(true)}>
-            <EuiIcon type="advancedSettingsApp" size="m" />
-          </EuiHeaderSectionItemButton>
-        </EuiHeaderSectionItem>
-      </EuiHeaderSection>
+            <Text transform="uppercase">Settings</Text>
+          </Button>
+        </Navbar.Content>
+      </Navbar>
       <Settings
         visible={isSettingsOpen}
         closeHandler={() => setIsSettingsOpen(false)}
       />
-    </EuiHeader>
+    </>
   );
 };
 
