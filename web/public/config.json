@@ -27,14 +27,14 @@
   "providers": [
     {
       "name": "The Times Of India",
-      "logo": "https://static.wikia.nocookie.net/logopedia/images/d/d7/TOI_logo.png/revision/latest/scale-to-width-down/250?cb=20210602200623",
+      "logo": "https://gumlet.assettype.com/newslaundry%2F2020-05%2Fb2c7fa72-cc83-4901-b6f1-27b754a9fc14%2FTOIlayoffs.jpg?w=1200&auto=format%2Ccompress&ogImage=true",
       "rss_url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
       "website": "https://timesofindia.indiatimes.com/",
       "category": "famous"
     },
     {
       "name": "WIRED",
-      "logo": "https://satelles.com/wp-content/uploads/2020/07/WORKS_wired-magazine.jpg",
+      "logo": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7fed08634772.5a078211b6552.jpg",
       "website": "https://www.wired.com/",
       "category": "famous",
       "rss_url": "https://www.wired.com/feed/rss"
@@ -48,7 +48,7 @@
     },
     {
       "name": "CNN",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/CNN_International_logo.svg/2048px-CNN_International_logo.svg.png",
+      "logo": "https://ichef.bbci.co.uk/news/976/cpsprodpb/10A30/production/_124244186_gettyimages-498133654.jpg",
       "rss_url": "http://rss.cnn.com/rss/cnn_topstories.rss",
       "category": "famous",
       "website": "https://edition.cnn.com/"
@@ -68,15 +68,8 @@
       "category": "politics"
     },
     {
-      "name": "New York Times",
-      "logo": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1491958734/bqp32una36b06hmbulla.png",
-      "rss_url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-      "website": "https://www.nytimes.com/international/",
-      "category": "politics"
-    },
-    {
       "name": "Politico",
-      "logo": "https://play-lh.googleusercontent.com/G1D8XVOhCOy8KnVReqbxAPit5Saa-EVUOqVfkV6hJVwM1MOaGrgc0UmjOOzQaVwFr-s",
+      "logo": "https://goadnews.com/wp-content/uploads/2022/09/1663665115_politico-billboard.png",
       "rss_url": "https://www.politico.com/rss/politicopicks.xml",
       "website": "https://www.politico.com/",
       "category": "politics"
@@ -96,8 +89,15 @@
       "category": "politics"
     },
     {
+      "name": "New York Times",
+      "logo": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1491958734/bqp32una36b06hmbulla.png",
+      "rss_url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      "website": "https://www.nytimes.com/international/",
+      "category": "politics"
+    },
+    {
       "name": "Tech Crunch",
-      "logo": "https://upskill.io/wp-content/uploads/2018/02/tech-crunch-logo.jpg",
+      "logo": "https://techcrunch.com/wp-content/uploads/2018/02/tc-backlight.png?w=990&crop=1",
       "rss_url": "https://techcrunch.com/feed/",
       "category": "technology",
       "website": "https://techcrunch.com/"
@@ -125,7 +125,7 @@
     },
     {
       "name": "Fossbytes",
-      "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQFCUqPROFmFjg/company-logo_200_200/0/1610452777841?e=2147483647&v=beta&t=gCNDA0liVD2tRakF2f8JIDIiEVUPO1pdivDEALv2glQ",
+      "logo": "https://fossbytes.com/wp-content/uploads/2014/08/fossbytes-cover-photo.png",
       "rss_url": "https://fossbytes.com/feed/?x=1",
       "category": "technology",
       "website": "https://fossbytes.com/"
@@ -153,7 +153,7 @@
     },
     {
       "name": "BuzzFeed Celeb",
-      "logo": "https://static.wikia.nocookie.net/buzzfeed-tasty/images/8/89/BuzzFeed_Celeb.jpeg/revision/latest?cb=20200309190016",
+      "logo": "https://pbs.twimg.com/profile_banners/740882012/1639705236/1500x500",
       "rss_url": "https://www.buzzfeed.com/in/celebrity.xml",
       "category": "entertainment",
       "website": "https://www.buzzfeed.com/in/celebrity"
@@ -167,7 +167,7 @@
     },
     {
       "name": "One Football",
-      "logo": "https://pbs.twimg.com/profile_images/1550051536725843968/w0fLFCiP_400x400.jpg",
+      "logo": "https://minilua.net/wp-content/uploads/2019/10/Onefootball-Descubra-como-instalar-aplicativo-de-not%C3%ADcias-de-futebol-no-celular.jpg",
       "rss_url": "https://onefootball.com/rss/en.xml",
       "category": "sports",
       "website": "https://onefootball.com/en/home"
@@ -223,7 +223,7 @@
     },
     {
       "name": "Camille Styles",
-      "logo": "https://media-exp1.licdn.com/dms/image/C560BAQE6XkpkQeKzMg/company-logo_200_200/0/1615501263275?e=2147483647&v=beta&t=qrEvA_2orskJ6RXRidqrHVLkC348NLskiFJOeTH4qbY",
+      "logo": "https://static.spacecrafted.com/c4c7ad2ba1d54678a13a9a251d36139e/i/e5bdc9b4e7894a9bae534ca9abdf5d62/1/4SoifmQp45JMgBnHp7ed2/camille-styles-logo.png",
       "rss_url": "https://camillestyles.com/feed/",
       "category": "lifestyle",
       "website": "https://camillestyles.com/"
