@@ -38,7 +38,6 @@ function Settings({ visible, closeHandler }) {
         <Row justify="space-between">
           <Text size={14}>Dark Mode</Text>
           <Switch
-            shadow
             color="warning"
             iconOn={<SunIcon filled />}
             iconOff={<MoonIcon filled />}

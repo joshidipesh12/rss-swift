@@ -4,7 +4,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
   position: relative;
 }
 
@@ -38,6 +37,7 @@
 }
 .card:hover {
   transform: translateY(-1rem) rotateZ(-2deg);
+  cursor: pointer;
 }
 .card:hover ~ .card {
   transform: translateX(130px);
