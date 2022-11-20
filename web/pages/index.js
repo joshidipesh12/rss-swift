@@ -18,12 +18,12 @@ export default function Home() {
         justify="space-between"
         css={{ paddingInline: "$2xl", marginTop: "$2xl" }}>
         <Text h3 size={30}>
-          Today's Topic:{" "}
+          Today&apos;s Topic{" "}
           <Text span color="primary">
             SPORTS
           </Text>
         </Text>
-        <Button auto flat ghost rounded color="gradient">
+        <Button auto ghost rounded color="gradient">
           <Text>See All</Text>
         </Button>
       </Row>
@@ -64,7 +64,6 @@ export default function Home() {
         </Text>
         <Button
           auto
-          flat
           ghost
           rounded
           color="gradient"
