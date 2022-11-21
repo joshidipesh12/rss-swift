@@ -21,6 +21,9 @@ export default function MyDocument() {
         <link
           href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
           rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@500&family=Pacifico&display=swap"
+          rel="stylesheet"></link>
         {CssBaseline.flush()}
       </Head>
       <body>

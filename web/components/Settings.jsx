@@ -22,7 +22,7 @@ function Settings({ visible, closeHandler }) {
       open={visible}
       onClose={closeHandler}>
       <Modal.Header>
-        <Text id="modal-title" b size={18} css={{ fontFamily: "Anton" }}>
+        <Text id="modal-title" b size={30} css={{ fontFamily: "Bebas Neue" }}>
           App Settings
         </Text>
       </Modal.Header>

@@ -18,14 +18,17 @@ export default function Home() {
         justify="space-between"
         align="center"
         css={{ paddingInline: "$2xl", marginTop: "$2xl" }}>
-        <Text h3 size={30}>
+        <Text
+          h3
+          size={40}
+          css={{ fontFamily: "Bebas Neue", letterSpacing: "$wide" }}>
           Today&apos;s Topic{" "}
           <Text span color="primary">
             SPORTS
           </Text>
         </Text>
-        <Button auto ghost rounded color="gradient">
-          <Text>See All</Text>
+        <Button auto shadow color="secondary">
+          See All
         </Button>
       </Row>
       <section className={styles.carousel_container}>
@@ -61,18 +64,20 @@ export default function Home() {
         justify="space-between"
         align="center"
         css={{ paddingInline: "$2xl", marginTop: "$2xl" }}>
-        <Text h3 size={30}>
+        <Text
+          h3
+          size={30}
+          css={{ fontFamily: "Bebas Neue", letterSpacing: "$wide" }}>
           Top Feed Providers
         </Text>
         <Button
           auto
-          ghost
-          rounded
-          color="gradient"
+          shadow
+          color="secondary"
           onClick={() => {
             router.push("/feeds");
           }}>
-          <Text>More Providers</Text>
+          More Providers
         </Button>
       </Row>
       <section className={styles.cards_container}>

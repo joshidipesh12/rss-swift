@@ -11,14 +11,20 @@ function Home() {
     <Container css={{ minHeight: "100vh", width: "100vw" }}>
       <Text
         h1
-        css={{ fontSize: "$4xl", fontFamily: "Anton", textAlign: "center" }}>
+        size={60}
+        css={{
+          fontFamily: "Bebas Neue",
+          textAlign: "center",
+          marginTop: "1em",
+          letterSpacing: "$wide",
+        }}>
         Top RSS Providers
       </Text>
       {categories.map(category => {
         const provider = providers.filter(p => p.category === category);
         return (
           <section key={category}>
-            <Text h3 css={{ fontSize: "$2xl" }}>
+            <Text h3 css={{ fontSize: "$2xl", textTransform: "capitalize" }}>
               {category}
             </Text>
             <div className="card_section_container">
@@ -26,8 +32,13 @@ function Home() {
                 {provider.map(p => (
                   <Card
                     isHoverable
+                    isPressable
+                    variant="flat"
                     key={p.name}
-                    css={{ height: "$5xl", minWidth: "$6xl" }}>
+                    css={{ height: "$5xl", minWidth: "$6xl" }}
+                    onClick={() => {
+                      router.push(`/feeds/${encodeURIComponent(p.rss_url)}`);
+                    }}>
                     <Card.Image
                       src={p.logo}
                       objectFit="cover"
@@ -47,23 +58,6 @@ function Home() {
                         <Text color="#fff" size={12}>
                           {p.name}
                         </Text>
-                        <Button
-                          auto
-                          ghost
-                          rounded
-                          color="gradient"
-                          onClick={() => {
-                            router.push(
-                              `/feeds/${encodeURIComponent(p.rss_url)}`,
-                            );
-                          }}>
-                          <Text
-                            css={{ color: "inherit" }}
-                            size={12}
-                            weight="bold">
-                            EXPLORE
-                          </Text>
-                        </Button>
                       </Row>
                     </Card.Footer>
                   </Card>
@@ -82,8 +76,7 @@ function Home() {
           -webkit-mask-image: linear-gradient(
             to left,
             transparent 1%,
-            black 2%
-            transparent 1%,
+            black 2% transparent 1%
           );
           mask-image: linear-gradient(to left, transparent 1%, black 2%);
         }

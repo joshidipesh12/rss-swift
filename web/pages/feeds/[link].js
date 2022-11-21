@@ -1,16 +1,16 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import {
   EuiLink,
   EuiLoadingContent,
   EuiPageTemplate as Page,
   htmlIdGenerator,
-} from '@elastic/eui';
+} from "@elastic/eui";
 
-import EmptyPost from '../../components/EmptyPost';
-import Post from '../../components/Post';
-import FeedLayout from '../../Layouts/FeedLayout';
+import EmptyPost from "../../components/EmptyPost";
+import Post from "../../components/Post";
+import FeedLayout from "../../Layouts/FeedLayout";
 
 const Feeds = () => {
   const [feed, setFeed] = useState({});
@@ -39,7 +39,7 @@ const Feeds = () => {
           isLoading ? (
             <EuiLoadingContent lines={1} />
           ) : (
-            <EuiLink href={feed.link} color='text' target='_blank'>
+            <EuiLink href={feed.link} color="text" target="_blank">
               {feed.title}
             </EuiLink>
           )
@@ -51,7 +51,7 @@ const Feeds = () => {
             <small>{feed.description}</small>
           )
         }
-        iconType={isLoading || !('image' in feed) ? undefined : feed.image.url}
+        iconType={isLoading || !("image" in feed) ? undefined : feed.image.url}
       />
       <Page.Section>
         {isLoading
