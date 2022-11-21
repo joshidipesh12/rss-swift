@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Settings from "./Settings";
 import { Avatar, Button, Image, Navbar, Text } from "@nextui-org/react";
 import { EuiButtonIcon } from "@elastic/eui";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 
 const Header = () => {
   const { route } = useRouter();
@@ -10,11 +10,16 @@ const Header = () => {
 
   return (
     <>
-      <Navbar shouldHideOnScroll maxWidth="fluid" isCompact variant="sticky">
+      <Navbar maxWidth="fluid" isCompact variant="sticky">
         <Navbar.Content>
           <Navbar.Link href="/">
             <Image src="/icon.png" objectFit="contain" height={30} width={30} />
-            <Text b size="$1xl" color="inherit" hideIn="xs">
+            <Text
+              b
+              size="$xl"
+              color="inherit"
+              hideIn="xs"
+              css={{ fontFamily: "Pacifico" }}>
               Swift RSS
             </Text>
           </Navbar.Link>
@@ -40,13 +45,15 @@ const Header = () => {
             iconType="advancedSettingsApp"
             aria-label="Settings"
           />
-          <Avatar
-            bordered
-            as="button"
-            color="primary"
-            size="md"
-            src={`https://avatars.dicebear.com/api/initials/${"Abhishek Passan"}.svg`}
-          />
+          <Navbar.Link href="/login">
+            <Avatar
+              bordered
+              as="button"
+              color="primary"
+              size="md"
+              src={`https://avatars.dicebear.com/api/initials/${"Abhishek Passan"}.svg`}
+            />
+          </Navbar.Link>
         </Navbar.Content>
       </Navbar>
       <Settings

@@ -12,8 +12,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Chillax', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Mulish", "Chillax", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -25,7 +29,7 @@ a {
   box-sizing: border-box;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   background: black;
   color: white;
   --background: rgb(36, 36, 36);
@@ -33,6 +37,6 @@ a {
 }
 
 h1 {
-  font-family: 'Anton', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: "Bebas Neue", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
