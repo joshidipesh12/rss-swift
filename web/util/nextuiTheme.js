@@ -6,10 +6,12 @@ const globalTheme = {
 
 const dark = createTheme({
   type: "dark",
+  ...globalTheme,
 });
 
 const light = createTheme({
   type: "light",
+  ...globalTheme,
 });
 
 const theme = { dark, light, system: dark };

@@ -16,6 +16,7 @@ export default function Home() {
     <main className={styles.main}>
       <Row
         justify="space-between"
+        align="center"
         css={{ paddingInline: "$2xl", marginTop: "$2xl" }}>
         <Text h3 size={30}>
           Today&apos;s Topic{" "}
@@ -58,6 +59,7 @@ export default function Home() {
       </section>
       <Row
         justify="space-between"
+        align="center"
         css={{ paddingInline: "$2xl", marginTop: "$2xl" }}>
         <Text h3 size={30}>
           Top Feed Providers

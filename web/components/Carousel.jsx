@@ -1,7 +1,7 @@
-import { EuiButtonIcon } from '@elastic/eui';
-import React, { useEffect, useRef, useState } from 'react';
-import animate, { linear } from '../util/animations';
-import styles from '../styles/carousel.module.css';
+import { EuiButtonIcon } from "@elastic/eui";
+import React, { useEffect, useRef, useState } from "react";
+import animate, { linear } from "../util/animations";
+import styles from "../styles/carousel.module.css";
 
 const Carousel = ({
   children,
@@ -73,7 +73,7 @@ const Carousel = ({
     const gutter =
       (gutterSize || 1) *
       parseInt(
-        window.getComputedStyle(document.getElementsByTagName('html')[0])
+        window.getComputedStyle(document.getElementsByTagName("html")[0])
           .fontSize,
       );
     const slideWidth = cards.current[currentCard].offsetWidth;
@@ -105,26 +105,24 @@ const Carousel = ({
           ref: slider,
         }),
       )}
-      <div className={styles.controls}>
-        <EuiButtonIcon
-          size='m'
-          iconType='arrowLeft'
-          className={styles.left_btn}
-          display={iconDisplay || 'empty'}
-          onClick={e => leftClick(e)}
-          aria-label='previous slide'
-          style={{ borderRadius: '100%' }}
-        />
-        <EuiButtonIcon
-          size='m'
-          iconType='arrowRight'
-          className={styles.right_btn}
-          display={iconDisplay || 'empty'}
-          onClick={e => rightClick(e)}
-          aria-label='next slide'
-          style={{ borderRadius: '100%' }}
-        />
-      </div>
+      <EuiButtonIcon
+        size="m"
+        iconType="arrowLeft"
+        className={styles.btn}
+        display={iconDisplay || "empty"}
+        onClick={e => leftClick(e)}
+        aria-label="previous slide"
+        style={{ left: 20 }}
+      />
+      <EuiButtonIcon
+        size="m"
+        iconType="arrowRight"
+        className={styles.btn}
+        display={iconDisplay || "empty"}
+        onClick={e => rightClick(e)}
+        aria-label="next slide"
+        style={{ right: 20 }}
+      />
     </div>
   );
 };

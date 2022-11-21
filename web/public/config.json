@@ -1,9 +1,9 @@
 {
   "categories": [
-    "famous",
+    "popular",
+    "entertainment",
     "politics",
     "technology",
-    "entertainment",
     "sports",
     "lifestyle"
   ],
@@ -30,35 +30,35 @@
       "logo": "https://gumlet.assettype.com/newslaundry%2F2020-05%2Fb2c7fa72-cc83-4901-b6f1-27b754a9fc14%2FTOIlayoffs.jpg?w=1200&auto=format%2Ccompress&ogImage=true",
       "rss_url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
       "website": "https://timesofindia.indiatimes.com/",
-      "category": "famous"
+      "category": "popular"
     },
     {
       "name": "WIRED",
       "logo": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7fed08634772.5a078211b6552.jpg",
       "website": "https://www.wired.com/",
-      "category": "famous",
+      "category": "popular",
       "rss_url": "https://www.wired.com/feed/rss"
-    },
-    {
-      "name": "How To-Geeks",
-      "logo": "https://pbs.twimg.com/profile_images/1029818993954250753/gTKL-UVp_400x400.jpg",
-      "rss_url": "https://feeds.howtogeek.com/HowToGeek",
-      "category": "famous",
-      "website": "https://www.howtogeek.com/"
     },
     {
       "name": "CNN",
       "logo": "https://ichef.bbci.co.uk/news/976/cpsprodpb/10A30/production/_124244186_gettyimages-498133654.jpg",
       "rss_url": "http://rss.cnn.com/rss/cnn_topstories.rss",
-      "category": "famous",
+      "category": "popular",
       "website": "https://edition.cnn.com/"
     },
     {
       "name": "Life Hacker",
       "logo": "https://m.media-amazon.com/images/I/412tyIw0V1L.png",
       "rss_url": "https://lifehacker.com/rss",
-      "category": "famous",
+      "category": "popular",
       "website": "https://lifehacker.com/"
+    },
+    {
+      "name": "How To-Geeks",
+      "logo": "https://pbs.twimg.com/profile_images/1029818993954250753/gTKL-UVp_400x400.jpg",
+      "rss_url": "https://feeds.howtogeek.com/HowToGeek",
+      "category": "popular",
+      "website": "https://www.howtogeek.com/"
     },
     {
       "name": "The Economic Times",
@@ -132,7 +132,7 @@
     },
     {
       "name": "Mashable",
-      "logo": "https://mashable.com/images/mashable-logomark.png",
+      "logo": "https://mashable.com/images/mashable-choice-banner.jpeg",
       "rss_url": "https://in.mashable.com/feed.xml",
       "category": "entertainment",
       "website": "https://in.mashable.com/"
