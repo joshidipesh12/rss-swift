@@ -1,11 +1,6 @@
 const IconGoogle = () => {
   return (
-    <svg
-      aria-hidden="true"
-      class="native svg-icon iconGoogle"
-      width="18"
-      height="18"
-      viewBox="0 0 18 18">
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18">
       <path
         d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18Z"
         fill="#4285F4"></path>

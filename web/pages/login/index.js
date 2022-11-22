@@ -2,6 +2,7 @@ import Layout from "../../Layouts/Layout";
 import {
   Container,
   Row,
+  Col,
   Text,
   Input,
   Spacer,
@@ -16,14 +17,18 @@ import IconFacebook from "../../components/IconFacebook";
 
 const Login = () => {
   return (
-    <Container>
+    <Container xs>
       <Row justify="center" align="center" css={{ height: "90vh" }}>
-        <div>
-          <Image src="/icon.png" height={100} width={100} />
+        <Col>
+          <Image src="/icon.png" height={70} width={70} />
           <Text
             h1
-            size={60}
-            css={{ fontFamily: "Bebas Neue", letterSpacing: "$wide" }}>
+            size="$5xl"
+            css={{
+              fontFamily: "Bebas Neue",
+              letterSpacing: "$wide",
+              textAlign: "center",
+            }}>
             Login to your Account
           </Text>
           <Spacer y={3} />
@@ -56,16 +61,21 @@ const Login = () => {
           </Row>
           <Spacer y={2} />
           <Row justify="space-between">
-            <Button size="lg" css={{ width: "48%" }}>
-              Log in
-            </Button>
-            <Button size="lg" color="secondary" css={{ width: "48%" }}>
-              Sign up
-            </Button>
+            <Col
+              css={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                gap: "4%",
+              }}>
+              <Button css={{ width: "48%" }}>Log in</Button>
+              <Button color="secondary" css={{ width: "48%" }}>
+                Sign up
+              </Button>
+            </Col>
           </Row>
           <RuleWithText style={{ marginTop: ".5rem" }}>OR</RuleWithText>
           <Button
-            size="lg"
             bordered
             color="gradient"
             css={{ display: "block", width: "100%", marginTop: ".5rem" }}>
@@ -73,7 +83,6 @@ const Login = () => {
             &nbsp; Log in with Google
           </Button>
           <Button
-            size="lg"
             css={{
               display: "block",
               width: "100%",
@@ -83,7 +92,7 @@ const Login = () => {
             <IconFacebook fill="white" />
             &nbsp; Log in with Facebook
           </Button>
-        </div>
+        </Col>
       </Row>
     </Container>
   );
