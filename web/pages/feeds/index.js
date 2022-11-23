@@ -37,7 +37,11 @@ function Home() {
                     key={p.name}
                     css={{ height: "$5xl", minWidth: "$6xl" }}
                     onClick={() => {
-                      router.push(`/feeds/${encodeURIComponent(p.rss_url)}`);
+                      router.push(
+                        `/feeds/${encodeURIComponent(p.rss_url)}?category=${
+                          p.category
+                        }`,
+                      );
                     }}>
                     <Card.Image
                       src={p.logo}

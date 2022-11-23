@@ -18,6 +18,7 @@ const Feeds = () => {
   const router = useRouter();
 
   useEffect(() => {
+    setIsLoading(true);
     const fetchData = link => {
       axios.get(`/api/feeds/${encodeURIComponent(link)}`).then(res => {
         setFeed(res.data);
@@ -26,12 +27,12 @@ const Feeds = () => {
     };
 
     if (router.isReady) fetchData(router.query.link);
-  }, [router.isReady]);
+  }, [router.query.link]);
 
   const LoadingItems = Array.from(Array(5)).map(() => (
     <EmptyPost key={htmlIdGenerator()()} />
   ));
-  console.log(feed);
+
   return (
     <>
       <Page.Header

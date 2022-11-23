@@ -94,7 +94,11 @@ export default function Home() {
             .map(prov => (
               <article
                 onClick={() => {
-                  router.push(`/feeds/${encodeURIComponent(prov.rss_url)}`);
+                  router.push(
+                    `/feeds/${encodeURIComponent(prov.rss_url)}?category=${
+                      prov.category
+                    }`,
+                  );
                 }}
                 key={prov.name}
                 className={styles.card}>

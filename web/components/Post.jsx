@@ -8,12 +8,13 @@ import {
   EuiTextColor,
   EuiTitle,
   useEuiTheme,
-} from '@elastic/eui';
+} from "@elastic/eui";
 
-import { DateTime } from 'luxon';
-import { setPostClicked } from '../store/slices/post';
-import { useDispatch } from 'react-redux';
-import { useRouter } from 'next/router';
+import { DateTime } from "luxon";
+import { setPostClicked } from "../store/slices/post";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/router";
+import { Text } from "@nextui-org/react";
 
 const Post = props => {
   const dispatch = useDispatch();
@@ -24,50 +25,63 @@ const Post = props => {
 
   const getDate = () => {
     let d = DateTime.now()
-      .diff(DateTime.fromISO(isoDate), ['day', 'hours'])
+      .diff(DateTime.fromISO(isoDate), ["day", "hours"])
       .normalize();
 
-    if (!d.isValid) return '0d';
+    if (!d.isValid) return "0d";
 
-    return (d.days === 0 ? d.shiftTo('hours') : d).toHuman({
-      unitDisplay: 'narrow',
+    return (d.days === 0 ? d.shiftTo("hours") : d).toHuman({
+      unitDisplay: "narrow",
       maximumFractionDigits: 0,
-      signDisplay: 'never',
+      signDisplay: "never",
     });
   };
 
   const handleClick = (event, post) => {
     event.preventDefault();
     dispatch(setPostClicked(post));
-    router.push('/post');
+    router.push("/post");
   };
 
   return (
-    <EuiPanel color='transparent'>
+    <EuiPanel color="transparent">
       <EuiFlexGroup>
         {thumbnail || image ? (
           <EuiFlexItem grow={2}>
-            <EuiImage src={thumbnail || image} alt={title} hasShadow />
+            <EuiImage
+              loading="lazy"
+              src={thumbnail || image}
+              alt={title}
+              hasShadow
+            />
           </EuiFlexItem>
         ) : null}
         <EuiFlexItem grow={10}>
           <EuiLink
-            href='/post'
-            color='success'
-            css={{ textDecoration: 'none' }}
+            href="/post"
+            color="success"
+            css={{ textDecoration: "none" }}
             onClick={event => handleClick(event, props)}>
             <EuiText>
-              <EuiTitle size='s'>
-                <p style={{ display: 'flex', flexDirection: 'column' }}>
+              <EuiTitle size="s">
+                <p style={{ display: "flex", flexDirection: "column" }}>
                   {title}
-                  <EuiTextColor color='success'>
-                    <small style={{ fontWeight: 'normal' }}>{getDate()}</small>
+                  <EuiTextColor color="success">
+                    <small style={{ fontWeight: "normal" }}>{getDate()}</small>
                   </EuiTextColor>
                 </p>
               </EuiTitle>
-              <p style={{ color: euiTheme.colors.text }}>
+              <Text
+                css={{
+                  textAlign: "justify",
+                  display: "-webkit-box",
+                  maxWidth: "80vw",
+                  overflow: "hidden",
+                  "-webkit-line-clamp": 2,
+                  "-webkit-box-orient": "vertical",
+                }}>
                 {contentSnippet || content}
-              </p>
+              </Text>
             </EuiText>
           </EuiLink>
         </EuiFlexItem>
