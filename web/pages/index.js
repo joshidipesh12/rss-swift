@@ -7,10 +7,17 @@ import carouselData from "../carouselData.json";
 import { EuiText, htmlIdGenerator } from "@elastic/eui";
 import { useRouter } from "next/router";
 import { Button, Row, Text } from "@nextui-org/react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
   const { providers, trending } = config;
   const router = useRouter();
+  const [topic, setTopic] = useState();
+
+  useEffect(() => {
+    axios.get("/api/top_feeds/topic").then(res => setTopic(res.data));
+  }, []);
 
   return (
     <main className={styles.main}>
@@ -24,7 +31,7 @@ export default function Home() {
           css={{ fontFamily: "Bebas Neue", letterSpacing: "$wide" }}>
           Today&apos;s Topic{" "}
           <Text span color="primary">
-            SPORTS
+            {topic}
           </Text>
         </Text>
         <Button auto shadow color="secondary">
@@ -77,7 +84,7 @@ export default function Home() {
           onClick={() => {
             router.push("/feeds");
           }}>
-          More Providers
+          See All
         </Button>
       </Row>
       <section className={styles.cards_container}>
