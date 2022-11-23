@@ -1,4 +1,4 @@
-import config from "../public/config.json";
+import config from "../config.json";
 import Layout from "../Layouts/Layout";
 import styles from "../styles/Home.module.css";
 import Carousel from "../components/Carousel";

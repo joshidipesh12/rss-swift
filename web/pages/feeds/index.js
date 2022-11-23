@@ -2,7 +2,7 @@ import { Button, Card, Col, Container, Row, Text } from "@nextui-org/react";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Layout from "../../Layouts/Layout";
-import config from "../../public/config.json";
+import config from "../../config.json";
 
 function Home() {
   const { categories, providers } = config;

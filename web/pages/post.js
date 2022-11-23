@@ -15,10 +15,10 @@ import {
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import FeedLayout from '../../Layouts/FeedLayout';
+import FeedLayout from '../Layouts/FeedLayout';
 
 import { DateTime } from 'luxon';
-import Spinner from '../../components/Spinner';
+import Spinner from '../components/Spinner';
 
 const Post = () => {
   const { postClicked } = useSelector(state => state.post);
