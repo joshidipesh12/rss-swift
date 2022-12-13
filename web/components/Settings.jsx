@@ -17,12 +17,11 @@ function Settings({ visible, closeHandler }) {
   return (
     <Modal
       closeButton
-      blur
-      aria-labelledby="modal-title"
+      aria-labelledby="settings"
       open={visible}
       onClose={closeHandler}>
       <Modal.Header>
-        <Text id="modal-title" b size={30} css={{ fontFamily: "Bebas Neue" }}>
+        <Text id="settings" b size={30} css={{ fontFamily: "Bebas Neue" }}>
           App Settings
         </Text>
       </Modal.Header>

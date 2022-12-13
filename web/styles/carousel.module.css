@@ -49,7 +49,8 @@
 }
 
 .card_active {
-  min-height: calc(var(--card-height) + 50px);
+  transition: height 0.8s linear, transform 0.2 ease-out;
+  height: calc(var(--card-height) + 50px);
   z-index: 3;
 }
 
