@@ -1,7 +1,6 @@
-import {configureStore, applyMiddleware} from '@reduxjs/toolkit';
-import reducers from './slices';
-import thunk from 'redux-thunk';
-import {composeWithDevTools} from 'redux-devtools-extension';
+import { configureStore } from "@reduxjs/toolkit";
+import reducers from "./slices";
+import api from "./middleware/api";
 
 const rootReducer = (state, action) => {
   /* reducer middleware */
@@ -12,13 +11,14 @@ const rootReducer = (state, action) => {
   return reducers(state, action);
 };
 
-const middleware = [thunk];
-
 // Global store
 const store = configureStore({
   reducer: rootReducer,
-  middleware,
-  devTools: composeWithDevTools(applyMiddleware(...middleware)),
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      immutableCheck: false,
+      serializableCheck: false,
+    }).concat(api),
 });
 
 export default store;

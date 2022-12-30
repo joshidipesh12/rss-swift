@@ -6,17 +6,20 @@ import { quad, makeEaseOut } from "../util/animations";
 import carouselData from "../carouselData.json";
 import { EuiText, htmlIdGenerator } from "@elastic/eui";
 import { useRouter } from "next/router";
-import { Button, Row, Text } from "@nextui-org/react";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { Button, Loading, Row, Text } from "@nextui-org/react";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getTopFeeds } from "../store/slices/top_feeds";
 
 export default function Home() {
-  const { providers, trending } = config;
   const router = useRouter();
-  const [topic, setTopic] = useState();
+  const dispatch = useDispatch();
+  const { providers, trending } = config;
+  const { loading, posts, category } = useSelector(state => state.top_feeds);
 
   useEffect(() => {
-    axios.get("/api/top_feeds/topic").then(res => setTopic(res.data));
+    dispatch(getTopFeeds());
+    return () => {};
   }, []);
 
   return (
@@ -30,9 +33,13 @@ export default function Home() {
           size={40}
           css={{ fontFamily: "Bebas Neue", letterSpacing: "$wide" }}>
           Today&apos;s Topic{" "}
-          <Text span color="primary">
-            {topic}
-          </Text>
+          {loading ? (
+            <Loading />
+          ) : (
+            <Text span color="primary">
+              {category}
+            </Text>
+          )}
         </Text>
         <Button auto shadow color="secondary">
           See All

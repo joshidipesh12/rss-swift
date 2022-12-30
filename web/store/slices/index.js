@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
-import sample from './sample';
-import post from './post';
+import { combineReducers } from "redux";
+import top_feeds from "./top_feeds";
+import post from "./post";
 
 const reducers = combineReducers({
-  sample,
+  top_feeds,
   post,
 });
 
