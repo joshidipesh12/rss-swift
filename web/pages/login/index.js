@@ -18,7 +18,7 @@ const Login = () => {
     <Container xs>
       <Row justify="center" align="center" css={{ height: "90vh" }}>
         <Col>
-          <Image src="/icon.png" height={70} width={70} />
+          <Image alt="RSS Swift Logo" src="/icon.png" height={70} width={70} />
           <Text
             h1
             size="$5xl"

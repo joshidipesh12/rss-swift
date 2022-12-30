@@ -9,7 +9,7 @@ import moment from "moment";
 /**
  * Top Stories Refreshed every 6 hrs via github workflow
  */
-export default async (req, res) => {
+const handler = async (req, res) => {
   const date = moment().format("DD MM YYYY");
   await mongooseConnect();
 
@@ -30,3 +30,5 @@ export default async (req, res) => {
   data.save();
   res.status(200).end();
 };
+
+export default handler;

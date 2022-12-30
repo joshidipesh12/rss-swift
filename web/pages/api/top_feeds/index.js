@@ -6,7 +6,7 @@ import config from "../../../config.json";
 
 import moment from "moment";
 
-export default async (req, res) => {
+const handler = async (req, res) => {
   const date = moment().format("DD MM YYYY");
   await mongooseConnect();
 
@@ -34,3 +34,5 @@ export default async (req, res) => {
   let data = new TopFeedTable({ date, data: { items, category } });
   data.save();
 };
+
+export default handler;

@@ -71,7 +71,6 @@
   width: 100%;
   min-height: calc(var(--container-height) + 5rem);
   position: relative;
-  overflow: hidden;
 }
 
 .card_img {
@@ -81,4 +80,5 @@
 }
 
 @media (max-width: 600px) {
+
 }

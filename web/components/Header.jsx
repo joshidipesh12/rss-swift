@@ -13,7 +13,13 @@ const Header = () => {
       <Navbar maxWidth="fluid" isCompact variant="sticky">
         <Navbar.Content>
           <Navbar.Link href="/">
-            <Image src="/icon.png" objectFit="contain" height={30} width={30} />
+            <Image
+              alt="RSS Swift Logo"
+              src="/icon.png"
+              objectFit="contain"
+              height={30}
+              width={30}
+            />
             <Text
               b
               size="$xl"

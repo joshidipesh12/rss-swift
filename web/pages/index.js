@@ -102,7 +102,11 @@ export default function Home() {
                 }}
                 key={prov.name}
                 className={styles.card}>
-                <img className={styles.card_logo} src={prov.logo} />
+                <img
+                  alt="Card Logo"
+                  className={styles.card_logo}
+                  src={prov.logo}
+                />
                 <h1 className={styles.card_header}>{prov.name}</h1>
               </article>
             ))}
