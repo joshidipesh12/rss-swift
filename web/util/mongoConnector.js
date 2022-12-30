@@ -18,7 +18,7 @@ const connect = () => {
           },
         );
     } else resolve();
-    reject();
+    // reject();
   });
   return result;
 };

@@ -1,0 +1,12 @@
+name: multiple-daily-cron
+on:
+  schedule:
+    - cron: "1 0,6,12,18 * * *"
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh Top Feeds every 6hrs
+        run: |
+          curl --request GET \
+          --url 'https://rss-swift.vercel.app/api/top_feeds/triggered'
