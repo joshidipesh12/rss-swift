@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    backstage.io/source-location: url:https://github.com/joshidipesh12/joshidipesh12.github.io
+    backstage.io/techdocs-ref: dir:.
+  description: test-reference
+  tags:
+    - component
+    - service
+  name: test-reference
+  links:
+    - url: https://joshidipesh12.github.io
+      title: My Portfolio Website
+      icon: dashboard
+spec:
+  lifecycle: experimental
+  owner: team-a
+  type: service
+  providesApis:
+    - get-test-data
+    - get-mock-staged-data/{data}
