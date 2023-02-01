@@ -19,5 +19,5 @@ spec:
   owner: team-a
   type: service
   providesApis:
-    - get-test-data
-    - get-mock-staged-data/{data}
+    - spotify
+    - petstore
