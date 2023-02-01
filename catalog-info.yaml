@@ -5,6 +5,7 @@ metadata:
     backstage.io/source-location: url:https://github.com/joshidipesh12/joshidipesh12.github.io
     backstage.io/techdocs-ref: dir:.
   description: test-reference
+  namespace: external-systems
   tags:
     - component
     - service
